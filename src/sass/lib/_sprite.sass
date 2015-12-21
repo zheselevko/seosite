@@ -1,0 +1,92 @@
+$icons: (0:0)
+$icons: map-merge($icons,(analitics: (X: -36px, Y:0px, W: 32px, H: 28px, TW: 121px, TH: 62px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(callback: (X: 0px, Y:0px, W: 32px, H: 32px, TW: 121px, TH: 62px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(codedby: (X: -72px, Y:-9px, W: 47px, H: 5px, TW: 121px, TH: 62px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(coderiver: (X: -72px, Y:0px, W: 49px, H: 5px, TW: 121px, TH: 62px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mail: (X: -93px, Y:-18px, W: 17px, H: 15px, TW: 121px, TH: 62px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(start_project: (X: -36px, Y:-36px, W: 32px, H: 22px, TW: 121px, TH: 62px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(tender: (X: 0px, Y:-36px, W: 32px, H: 26px, TW: 121px, TH: 62px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(time: (X: -72px, Y:-18px, W: 17px, H: 17px, TW: 121px, TH: 62px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+
+.icon-analitics
+	width: 32px
+	height: 28px
+	background-image: url('../img/icons.png')
+	background-position: -36px 0px
+
+.icon-callback
+	width: 32px
+	height: 32px
+	background-image: url('../img/icons.png')
+	background-position: 0px 0px
+
+.icon-codedby
+	width: 47px
+	height: 5px
+	background-image: url('../img/icons.png')
+	background-position: -72px -9px
+
+.icon-coderiver
+	width: 49px
+	height: 5px
+	background-image: url('../img/icons.png')
+	background-position: -72px 0px
+
+.icon-mail
+	width: 17px
+	height: 15px
+	background-image: url('../img/icons.png')
+	background-position: -93px -18px
+
+.icon-start_project
+	width: 32px
+	height: 22px
+	background-image: url('../img/icons.png')
+	background-position: -36px -36px
+
+.icon-tender
+	width: 32px
+	height: 26px
+	background-image: url('../img/icons.png')
+	background-position: 0px -36px
+
+.icon-time
+	width: 17px
+	height: 17px
+	background-image: url('../img/icons.png')
+	background-position: -72px -18px
