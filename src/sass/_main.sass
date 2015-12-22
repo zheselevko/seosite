@@ -1,3 +1,4 @@
+$font: Arial, Helvetica, sans-serif
 .out
 	.header
 		+border-box
@@ -21,12 +22,12 @@
 								display: block
 							.phone
 								color: #5d5c5c
-								font-family: Helvetica
+								font-family: $font
 								font-size: 17px
 								font-weight: 400
 							.department
 								color: #7c7d7d
-								font-family: Helvetica
+								font-family: $font
 								font-size: 15px
 								font-weight: 300
 							.mail
@@ -41,7 +42,7 @@
 									margin-top: -7px
 								a
 									color: #1484c6
-									font-family: Helvetica
+									font-family: $font
 									font-size: 15px
 									font-weight: 300
 									text-decoration: underline
@@ -49,7 +50,7 @@
 							.timework
 								position: relative
 								color: #7c7d7d
-								font-family: Helvetica
+								font-family: $font
 								font-size: 15px
 								font-weight: 400
 								margin: 0 0 0 70px
@@ -72,7 +73,7 @@
 						li
 							a
 								color: white
-								font-family: Helvetica
+								font-family: $font
 								font-size: 17px
 								font-weight: 400
 								padding: 0 27px
@@ -88,18 +89,24 @@
 			+clr
 			.container
 				width: 1210px
+				.row
+					margin-bottom: 0
 				.logo
 					text-align: center
 					height: 110px
 					.valign
 						width: 100%
+				.l8
+					.row
+						&:first-child
+							margin-bottom: 20px
 						
 				.l3
 					.analitics
 
 						padding: 0 19px 0 60px
 						color: white
-						font-family: Helvetica
+						font-family: $font
 						font-size: 15px
 						font-weight: 400
 						height: 50px
@@ -115,7 +122,7 @@
 
 						padding: 0 55px 0 70px
 						color: white
-						font-family: Helvetica
+						font-family: $font
 						font-size: 15px
 						font-weight: 400
 						height: 50px
@@ -131,7 +138,7 @@
 
 						padding: 0 55px 0 70px
 						color: white
-						font-family: Helvetica
+						font-family: $font
 						font-size: 15px
 						font-weight: 400
 						height: 50px
@@ -142,3 +149,83 @@
 							left: 20px
 							top: 50%
 							margin-top: -13px
+				.info
+					height: 110px
+					position: relative
+					[class^="icon-"]
+						position: absolute
+						top: 50%
+						margin-top: -25px
+						left: 0
+					.address
+						padding-left: 65px
+						color: #5d5c5c
+						font-family: $font
+						font-size: 15px
+						line-height: 19px
+						font-weight: 400
+				.search-wrapper
+					width: 95.6%
+					border: 2px solid #ebeced
+					border-radius: 3px
+					position: relative
+					input#search
+						border: none
+						width: 100%
+						padding: 15px 20px
+						color: #7c7d7d
+						font-family: $font
+						font-size: 15px
+						font-weight: 300
+					#ajax-search-btn
+						position: absolute
+						right: 0
+						top: 0
+						width: 105px
+						border: none
+						background-color: transparent
+						color: #1484c6
+						font-family: $font
+						font-size: 15px
+						font-weight: 400
+						text-decoration: underline
+						display: inline-block
+						text-align: center
+						padding: 14px 0 0 13px
+						line-height: 1
+						cursor: pointer
+						&:before
+							content: ''
+							position: absolute
+							left: 0
+							top: 0px
+							width: 27px
+							height: 46px
+							background: url("../img/srch_bf.png") 0 0 no-repeat
+.slider
+	width: 1230px
+	margin: 0 auto
+	.slider-next
+		position: absolute
+		right: 0
+		top: 50%
+		width: 35px
+		height: 85px
+		margin-top: -42px
+		z-index: 2
+		background:  url("../img/arr-r.png") 0 0 no-repeat
+		cursor: pointer
+	.slider-prev
+		position: absolute
+		left: 0
+		top: 50%
+		width: 35px
+		height: 85px
+		margin-top: -42px
+		z-index: 2
+		+rotate(180deg)
+		background:  url("../img/arr-r.png") 0 0 no-repeat
+		cursor: pointer
+	.indicators
+		bottom: 20px
+		z-index: 2

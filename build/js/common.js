@@ -1,5 +1,10 @@
-$(document).ready(function() {
+    $(document).ready(function(){
+      $('.slider').slider();
 
-	// go js
-
+	$('.slider-next').click(function() {
+   $('.slider').slider('next');
 });
+$('.slider-prev').click(function() {
+   $('.slider').slider('prev');
+});
+    });
