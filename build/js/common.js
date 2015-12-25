@@ -27,4 +27,64 @@ $('.slider-prev').click(function() {
 			element.siblings('li').find('ul').slideUp(200);
 		}
 	});
+
+$('.review').bxSlider({
+  mode: 'horizontal',
+  pagerCustom: '#bx-pager',
+  captions: false,
+  adaptiveHeight: true,
+  controls: false
+});
+var slider = $('.review').bxSlider();
+$('a.pager-prev').click(function () {
+    var current = slider.getCurrentSlide();
+    slider.goToPrevSlide(current) - 1;
+});
+$('a.pager-next').click(function () {
+    var current = slider.getCurrentSlide();
+    slider.goToNextSlide(current) + 1;
+});
+
+$('.start').bxSlider({
+  mode: 'horizontal',
+  infiniteLoop: false,
+  controls: true
+});
+$('.start_master').bxSlider({
+  mode: 'horizontal',
+  infiniteLoop: false,
+  controls: true
+});
+$('.start_pro').bxSlider({
+  mode: 'horizontal',
+  infiniteLoop: false,
+  controls: true
+});
+
     });
+
+$(document).ready(function(){
+  $('.positions').bxSlider({
+  mode: 'horizontal',
+  pagerCustom: '#bx-pager',
+  captions: false,
+  adaptiveHeight: true,
+  controls: false
+});
+var slider = $('.positions').bxSlider();
+$('a.prev').click(function () {
+    var current = slider.getCurrentSlide();
+    slider.goToPrevSlide(current) - 1;
+});
+$('a.next').click(function () {
+    var current = slider.getCurrentSlide();
+    slider.goToNextSlide(current) + 1;
+});
+    
+   
+});
+
+$(document).ready(function(){
+  $("#prices").lightTabs();
+
+  });

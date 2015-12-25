@@ -198,9 +198,9 @@ $font: Arial, Helvetica, sans-serif
 							content: ''
 							position: absolute
 							left: 0
-							top: 0px
+							top: -1px
 							width: 27px
-							height: 46px
+							height: 48px
 							background: url("../img/srch_bf.png") 0 0 no-repeat
 .slider
 	width: 1230px
@@ -223,7 +223,7 @@ $font: Arial, Helvetica, sans-serif
 		height: 85px
 		margin-top: -42px
 		z-index: 2
-		+rotate(180deg)
+		+rotate(180)
 		background:  url("../img/arr-r.png") 0 0 no-repeat
 		cursor: pointer
 	.indicators
@@ -282,9 +282,10 @@ $font: Arial, Helvetica, sans-serif
 			width: 100%
 			+box
 			+clr
+			margin-bottom: 30px
 			.name
-				height: 35px
-				width: 121px
+				height: 36px
+				width: 120px
 				position: relative
 				border-left: 2px solid #1484c6
 				border-top: 2px solid #1484c6
@@ -302,7 +303,7 @@ $font: Arial, Helvetica, sans-serif
 					width: 2px
 					height: 43px
 					background: #1484c6
-					+rotate(-30deg)
+					+rotate(-30)
 			.box
 				width: 100%
 				+box
@@ -383,3 +384,988 @@ $font: Arial, Helvetica, sans-serif
 								width: 18px
 								height: 18px
 								background: url("../img/arr-nav-act.png") 0 0 no-repeat
+		.position
+			width: 100%
+			+box
+			+clr
+			margin-bottom: 30px
+			.name
+				height: 36px
+				width: 120px
+				position: relative
+				border-left: 2px solid #ebeced
+				border-top: 2px solid #ebeced
+				color: #5d5c5c
+				font-family: $font
+				font-size: 18px
+				font-weight: 400
+				text-align: center
+				line-height: 35px
+				&:before
+					content: ''
+					position: absolute
+					right: -10px
+					top: -5px
+					width: 2px
+					height: 43px
+					background: #ebeced
+					+rotate(-30)
+			.box
+				width: 100%
+				+box
+				+clr
+				border: 2px solid #ebeced
+				position: relative
+				padding: 0 18px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: -2px
+					width: 136px
+					height: 2px
+					background: #fff
+				.bx-wrapper, .bx-viewport
+					height: 470px !important
+				ul
+					+box
+					+clr
+					width: 100%
+					margin: 20px 0
+					.link
+						margin-bottom: 20px
+						color: #1484c6
+						font-family: $font
+						font-size: 15px
+						font-weight: 300
+						text-decoration: underline
+						line-height: 1
+					.search
+						.bot
+							height: 55px
+							.img
+								width: 100%
+					.list
+						.row
+							margin-bottom: 0
+						.item
+							color: #686767
+							font-size: 15px
+							font-weight: 400
+							font-family: $font
+							line-height: 1
+							padding: 7px 10px
+							border-bottom: 2px solid #e1e1e1
+							span
+								color: #afafaf
+								font-size: 18px
+								font-weight: 400
+							b
+								color: #e6ac31
+								font-size: 22px
+								font-weight: 700
+								margin-right: 5px
+					.info
+						.item
+							color: silver
+							font-family: $font
+							font-size: 15px
+							font-weight: 400
+							&:first-child
+								.row
+									margin-top: 10px
+									margin-bottom: 10px
+							.row
+								margin-bottom: 0
+								a
+									font-family: $font
+									font-size: 12px
+									font-weight: 400
+									color: #1484c6
+									text-decoration: underline
+								span
+									color: #e6ac31
+									font-family: Helvetica
+									font-size: 15px
+									font-weight: 400
+		.reviews
+			width: 100%
+			+box
+			+clr
+			margin-bottom: 30px	
+			.name
+				height: 36px
+				width: 160px
+				position: relative
+				border-left: 2px solid #e6ac31
+				border-top: 2px solid #e6ac31
+				color: #5d5c5c
+				font-family: $font
+				font-size: 18px
+				font-weight: 400
+				text-align: center
+				line-height: 35px
+				&:before
+					content: ''
+					position: absolute
+					right: -10px
+					top: -5px
+					width: 2px
+					height: 43px
+					background: #e6ac31
+					+rotate(-30)
+			.box
+				width: 100%
+				+box
+				+clr
+				border: 2px solid #e6ac31
+				position: relative
+				padding: 25px 18px 20px 18px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: -2px
+					width: 177px
+					height: 2px
+					background: #fff
+				.pager-next, .pager-prev
+					top: 80px
+				ul
+					margin: 0
+					.image
+						height: 142px
+						border-bottom: 2px solid #e1e1e1
+						.img
+							width: 100%
+					.content
+						color: #5d5c5c
+						font-family: $font
+						font-size: 15px
+						font-weight: 400
+						line-height: 19px
+						padding: 18px 4px 0 4px
+		.response
+			width: 100%
+			background-color: #ebeced
+			margin-bottom: 30px
+			+box
+			+clr
+			.box
+				padding: 30px 20px 16px 20px
+				+box
+				+clr
+				.name
+					color: #5d5c5c
+					font-family: $font
+					font-size: 18px
+					font-weight: 400
+					line-height: 1
+				.form
+					width: 100%
+					padding: 20px 0 27px 0
+					position: relative
+					form
+						position: relative
+					input[type="text"]
+						width: 191px
+						height: 48px
+						background-color: white
+						margin: 0
+						border: none
+						padding: 0 30px
+						color: #5d5c5c
+						font-family: $font
+						font-size: 15px
+						font-weight: 300
+					input[type="submit"]
+						width: 52px
+						height: 48px
+						background-color: #1484c6
+						position: absolute
+						right: 0
+						top: 0
+						border: none
+						color: white
+						font-family: $font
+						font-size: 15px
+						font-weight: 400
+					::-webkit-input-placeholder
+						color: #5d5c5c
+					::-moz-placeholder 
+						color: #5d5c5c       
+					:-moz-placeholder
+						color: #5d5c5c           
+					:-ms-input-placeholder
+						color: #5d5c5c 
+				.socials
+					ul
+						width: 100%
+						text-align: center
+						margin: 17px 0
+						li
+							position: relative
+							display: inline-block
+		.warning
+			.name
+				height: 36px
+				width: 120px
+				position: relative
+				border-left: 2px solid #e6ac31
+				border-top: 2px solid #e6ac31
+				color: #5d5c5c
+				font-family: $font
+				font-size: 18px
+				font-weight: 400
+				text-align: center
+				line-height: 35px
+				&:before
+					content: ''
+					position: absolute
+					right: -10px
+					top: -5px
+					width: 2px
+					height: 43px
+					background: #e6ac31
+					+rotate(-30)
+			.box
+				width: 100%
+				+box
+				+clr
+				border: 2px solid #e6ac31
+				position: relative
+				padding: 35px 0 30px 0
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: -2px
+					width: 136px
+					height: 2px
+					background: #fff
+				.info
+					color: #5d5c5c
+					font-family: $font
+					font-size: 15px
+					font-weight: 400
+					line-height: 1
+					margin-bottom: 23px
+		.request
+			width: 100%
+			+box
+			+clr
+			margin-bottom: 30px	
+			.name
+				height: 36px
+				width: 160px
+				position: relative
+				border-left: 2px solid #e6ac31
+				border-top: 2px solid #e6ac31
+				color: #5d5c5c
+				font-family: $font
+				font-size: 18px
+				font-weight: 400
+				text-align: center
+				line-height: 35px
+				&:before
+					content: ''
+					position: absolute
+					right: -10px
+					top: -5px
+					width: 2px
+					height: 43px
+					background: #e6ac31
+					+rotate(-30)
+			.box
+				width: 100%
+				+box
+				+clr
+				border: 2px solid #e6ac31
+				position: relative
+				padding: 20px 18px 23px 18px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: -2px
+					width: 177px
+					height: 2px
+					background: #fff
+				.row
+					margin-bottom: 0
+				.push
+					.row
+						margin-top: 10px
+						margin-bottom: 25px
+				.input-field
+					margin: 0
+					input[type="text"]
+						border: 2px solid #ebeced
+						border-radius: 3px
+						padding: 0 15px
+						width: 218px
+						height: 48px
+						margin-bottom: 5px
+					input[type=text]:focus:not([readonly])
+						border: 2px solid #26a69a
+						box-shadow: none
+					::-webkit-input-placeholder
+						color: #5d5c5c
+					::-moz-placeholder 
+						color: #5d5c5c       
+					:-moz-placeholder
+						color: #5d5c5c           
+					:-ms-input-placeholder
+						color: #5d5c5c 
+					label
+						position: relative
+						left: 0
+						top: 0
+					.l9
+						color: #5d5c5c
+						font-family: $font
+						font-size: 14px
+						text-align: center
+						line-height: 2rem
+						font-weight: 400
+					.btn
+						width: 208px
+						height: 48px
+						color: white
+						font-family: $font
+						font-size: 15px
+						font-weight: 400
+						text-transform: initial
+						line-height: 3rem
+		.news
+			width: 100%
+			+box
+			+clr
+			margin-bottom: 30px
+			.name
+				height: 36px
+				width: 120px
+				position: relative
+				border-left: 2px solid #1484c6
+				border-top: 2px solid #1484c6
+				color: #5d5c5c
+				font-family: $font
+				font-size: 18px
+				font-weight: 400
+				text-align: center
+				line-height: 35px
+				&:before
+					content: ''
+					position: absolute
+					right: -10px
+					top: -5px
+					width: 2px
+					height: 43px
+					background: #1484c6
+					+rotate(-30)
+			.box
+				width: 100%
+				+box
+				+clr
+				border: 2px solid #1484c6
+				position: relative
+				padding: 17px 18px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: -2px
+					width: 136px
+					height: 2px
+					background: #fff
+				ul
+					margin: 0
+					width: 100%
+					+box
+					li
+						float: left
+						width: 100%
+						margin-bottom: 18px
+						padding: 0 0 22px 0
+						border-bottom: 2px solid #e1e1e1
+						.news_date
+							width: 90px
+							height: 27px
+							background-color: #ebeced
+							color: #6e6d6d
+							font-family: $font
+							font-size: 12px
+							font-weight: 300
+							text-align: center
+							line-height: 2rem
+							position: relative
+							margin-bottom: 20px
+							&:before
+								content: ''
+								position: absolute
+								left: 0
+								bottom: -7px
+								width: 10px
+								height: 7px
+								background: url("../img/date_b.png") 0 0 no-repeat
+						.news_title
+							color: #1484c6
+							font-family: $font
+							font-size: 15px
+							font-weight: 400
+							text-decoration: underline
+							line-height: 20px
+							margin-bottom: 15px
+						.news_content
+							color: #5d5c5c
+							font-family: $font
+							font-size: 14px
+							font-weight: 300
+				.right
+					color: #1484c6
+					font-family: $font
+					font-size: 15px
+					font-weight: 400
+					text-decoration: underline
+		.blog
+			width: 100%
+			+box
+			+clr
+			position: relative
+			.name
+				height: 36px
+				width: 217px
+				position: relative
+				border-left: 2px solid #ebeced
+				border-top: 2px solid #ebeced
+				color: #5d5c5c
+				font-family: $font
+				font-size: 18px
+				font-weight: 400
+				text-align: center
+				line-height: 36px
+				&:before
+					content: ''
+					position: absolute
+					right: -10px
+					top: -5px
+					width: 2px
+					height: 43px
+					background: #ebeced
+					+rotate(-30)
+			.box
+				width: 100%
+				+box
+				+clr
+				border: 2px solid #ebeced
+				position: relative
+				padding: 20px 18px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					top: -2px
+					width: 235px
+					height: 2px
+					background: #fff
+				ul
+					width: 100%
+					+box
+					+clr
+					margin: 0
+					li
+						float: left
+						width: 100%
+						padding: 0 0 20px 0
+						margin-bottom: 25px
+						border-bottom: 2px solid #e1e1e1
+						&:last-child
+							margin-bottom: 0
+							border: none
+						.blog_date
+							color: #5d5c5c
+							font-family: $font
+							font-size: 12px
+							font-weight: 300
+							line-height: 1
+							margin-bottom: 25px
+						.blog_name
+							a
+								color: #1484c6
+								font-family: $font
+								font-size: 15px
+								font-weight: 400
+								line-height: 20px
+								text-decoration: underline
+			.rss
+				position: absolute
+				right: 21px
+				top: 7px
+				color: #1484c6
+				font-family: $font
+				font-size: 15px
+				font-weight: 300
+				text-decoration: underline
+.content
+	width: 100%
+	+box
+	+clr
+	.h3	
+		color: #1484c6
+		font-family: $font
+		font-size: 22px
+		font-weight: 700
+		line-height: 2rem
+		margin-bottom: 25px
+	p
+		color: #5d5c5c
+		font-family: $font
+		font-size: 15px
+		line-height: 20px
+		font-weight: 300
+		margin-bottom: 20px
+		a
+			color: #1484c6
+			text-decoration: underline
+	.video
+		margin-bottom: 40px
+	.reasons
+		width: 100%
+		+box
+		+clr
+		.name	
+			color: #1484c6
+			font-family: $font
+			font-size: 22px
+			font-weight: 700
+			line-height: 2rem
+			margin-bottom: 15px
+		.list
+			width: 100%
+			+box
+			+clr
+			.list__item
+				float: left
+				width: 100%
+				position: relative
+				margin-bottom: 20px
+				+box
+				.info
+					padding-left: 50px
+					color: #5d5c5c
+					font-family: $font
+					font-size: 15px
+					font-weight: 300
+					line-height: 20px
+					.title
+						font-size: 18px
+						font-weight: 400
+						line-height: 2.5rem
+						margin-bottom: 10px
+						position: relative
+						&:before
+							content: ''
+							position: absolute
+							left: 0
+							bottom: 0
+							width: 85px
+							height: 2px
+							background-color: #e6ac31
+				.number
+					position: absolute
+					left: 0
+					top: 0
+					width: 36px
+					height: 36px
+					background-color: #ebeced
+					color: #e6ac31
+					font-family: $font
+					font-size: 22px
+					font-weight: 700
+					text-align: center
+					line-height: 2.5rem
+					&:before
+						content: ''
+						position: absolute
+						right: 0
+						bottom: -12px
+						width: 0
+						height: 0
+						border-top: 12px solid #ebeced
+						border-left: 12px solid transparent
+	.prices
+		width: 100%
+		+box
+		+clr
+		border: 2px solid #edf0f4
+		border-radius: 10px
+		background: #ebeced
+		margin-bottom: 30px
+		ul.tabs_nav
+			float: left
+			margin: 0
+			width: 71px
+			li
+				float: left
+				width: 100%
+				text-align: center
+				padding: 25px 14px
+				background: #ebeced
+				border-top: 2px solid #fff
+				border-right: 2px solid #fff
+				cursor: pointer
+				&:first-child
+					border-top: none
+			li.active
+				border-top: 2px solid transparent
+				border-right: 2px solid transparent
+				background: #edf0f4
+				&:first-child
+					border-top: none
+				&:nth-child(2)
+					border-top: 2px solid #fff
+				&:nth-child(3)
+					border-top: 2px solid #fff
+			li.active
+				.icon-start
+					background-image: url("../img/start_act.png")
+					background-position: 0 0
+				.icon-startwo
+					background-image: url("../img/startwo_act.png")
+					background-position: 0 0
+				.icon-startree
+					background-image: url("../img/startree.png")
+					background-position: 0 0
+		.tab_content
+			float: left
+			+box
+			+clr
+			.left_col
+				padding: 30px 13px 30px 20px
+				background: #edf0f4
+				height: 300px
+				width: 215px
+				float: left
+				.name
+					color: #5d5c5c
+					font-family: $font
+					font-size: 18px
+					font-weight: 700
+				a
+					color: #1484c6
+					font-family: $font
+					font-size: 15px
+					font-weight: 300
+					text-decoration: underline
+				p
+					margin-bottom: 10px
+					font-size: 16px
+			.right_col
+				float: left
+				background: #fff
+				padding: 25px 18px 25px 18px
+				border-top-right-radius: 10px
+				border-bottom-right-radius: 10px
+				width: 314px
+				height: 300px
+				position: relative
+				ul
+					width: 100%
+					+box
+					+clr
+					margin: 0
+					li
+						text-align: center
+						.name
+							color: #5d5c5c
+							font-family: $font
+							text-align: center
+							font-size: 15px
+							font-weight: 300
+							line-height: 20px
+							margin-bottom: 10px
+						.image
+							+box
+							+clr
+				.bx-controls
+					width: 100%
+					+box
+					+clr
+					text-align: center
+					.bx-pager-item
+						display: inline-block
+						width: 16px
+						height: 16px
+						margin: 0 5px 0 0
+						a
+							display: inline-block
+							width: 100%
+							height: 100%
+							border-radius: 50%
+							background-color: #edf0f4
+							color: white
+							font-family: $font
+							font-size: 11px
+							font-weight: 300
+							text-align: center
+							line-height: 17px
+						.active
+							background-color: #1484c6
+				.bx-prev
+					position: absolute
+					left: 20px
+					top: 50%
+					text-indent: -9999px
+					width: 14px
+					height: 24px
+					margin-top: -12px
+					background: url("../img/start_ln.png") 0 0 no-repeat
+				.bx-next
+					position: absolute
+					right: 20px
+					top: 50%
+					text-indent: -9999px
+					width: 14px
+					height: 24px
+					margin-top: -12px
+					background: url("../img/start_rn.png") 0 0 no-repeat
+	.team
+		width: 100%
+		+box
+		+clr
+		.list
+			width: 100%
+			+box
+			.list__item
+				float: left
+				width: 100%
+				margin-bottom: 20px
+				position: relative
+				.info	
+					padding-left: 80px
+					.title
+						color: #5d5c5c
+						font-family: $font
+						font-size: 17px
+						font-weight: 400
+						line-height: 1
+						padding-bottom: 10px
+						margin-bottom: 10px
+						position: relative
+						&:before
+							content: ''
+							position: absolute
+							left: 0
+							bottom: 0
+							width: 51px
+							height: 2px
+							background-color: #e6ac31
+					.text
+						font-size: 15px
+						font-weight: 300
+						color: #5d5c5c
+						font-family: $font
+						line-height: 20px
+				[class^="icon-"]
+					position: absolute
+					left: 0
+					top: 0
+	.seo_tabs
+		width: 100%
+		+box
+		+clr
+		background-color: #edf0f4
+		border-radius: 10px
+		ul.tab_navi
+			margin: 0
+			width: 100%
+			+box
+			+clr
+			li
+				position: relative
+				float: left
+				display: block
+				width: 33.3%
+				text-align: center
+				background: #ebeced
+				
+				border-bottom: 2px solid #fff
+				border-left: 2px solid #fff
+				cursor: pointer
+				&:first-child
+					border-top-left-radius: 10px
+					border-left: none
+				&:last-child
+					border-top-right-radius: 10px
+				a
+					display: block
+					color: #5d5c5c
+					font-family: $font
+					font-size: 15px
+					font-weight: 400
+					padding: 20px 30px 15px 30px
+			li.active
+				border-bottom: 2px solid transparent
+				border-left: 2px solid transparent
+				background: #edf0f4
+				&:first-child
+					border-top: none
+				&:nth-child(2)
+					border-left: 2px solid #fff
+				&:nth-child(3)
+					border-left: 2px solid #fff
+
+		.tab__content
+			padding: 20px 25px
+			+box
+			+clr
+			width: 100%
+			.image
+				text-align: center
+			li
+				color: #5d5c5c
+				font-family: $font
+				font-size: 15px
+				font-weight: 300
+			.tab-content
+				display: none
+			#tab1
+				display: block
+	.sub_price
+		.col
+			text-align: center
+			color: #1484c6
+			font-family: $font
+			font-size: 18px
+			font-weight: 700
+.pager-next, .next
+	position: absolute
+	right: 18px
+	top: 15px
+	width: 26px
+	height: 26px
+	cursor: pointer
+	+rotate(180)
+	background: url("../img/bx_l.png") 0 0 no-repeat
+.pager-prev, .prev
+	position: absolute
+	left: 18px
+	top: 15px
+	width: 26px
+	height: 26px
+	cursor: pointer
+	background: url("../img/bx_l.png") 0 0 no-repeat
+.clearfix
+	+clr
+footer.page-footer
+	background-color: #ebeced
+	padding-top: 50px
+	.container
+		width: 1180px
+		.logo
+			margin-bottom: 20px
+		.timework
+			position: relative
+			padding-left: 35px
+			color: #7c7d7d
+			font-family: $font
+			font-size: 15px
+			font-weight: 400
+			line-height: 1.2rem
+			margin-bottom: 25px
+			.icon-time
+				position: absolute
+				left: 0
+				top: 0
+		.copy
+			p
+				margin: 0
+				color: #5d5c5c
+				font-family: $font
+				font-size: 15px
+				font-weight: 300
+		.socials
+			ul
+				width: 100%
+				text-align: center
+				+box
+				+clr
+				li
+					position: relative
+					display: inline-block
+					margin-right: 5px
+		.download
+			a
+				color: #1484c6
+				font-family: $font
+				font-size: 15px
+				font-weight: 300
+				text-decoration: underline
+				display: block
+				position: relative
+				line-height: 16px
+				padding-left: 35px
+				margin-bottom: 10px
+				.icon-pdf
+					position: absolute
+					left: 0
+					top: 0
+		.name
+			color: #5d5c5c
+			font-family: $font
+			font-size: 15px
+			font-weight: 300
+		.phone
+			color: #5d5c5c
+			font-family: $font
+			font-size: 22px
+			font-weight: 400
+		.nav
+			width: 100%
+			padding: 0 27px
+			ul
+				width: 100%
+				padding-bottom: 15px
+				border-bottom: 2px solid #e6ac31
+				margin: 0
+				li
+					position: relative
+					display: inline-block
+					line-height: 1
+					margin-right: 55px
+					&:last-child
+						margin-right: 0
+						padding-left: 40px
+					a
+						color: #1484c6
+						font-family: $font
+						font-size: 17px
+						font-weight: 400
+						text-decoration: underline
+						.icon-write
+							position: absolute
+							left: 0
+							top: -10px
+		.menu
+			padding: 0 2rem
+			.l2
+				width: 20%
+			ul
+				margin: 0
+				li
+					&:first-child
+						margin-bottom: 15px
+					a
+						color: #1484c6
+						font-family: $font
+						font-size: 15px
+						font-weight: 300
+						line-height: 20px
+						text-decoration: underline
+		.offers
+			color: #7c7d7d
+			font-family: $font
+			font-size: 13px
+			font-weight: 300
+.off
+	margin: 0

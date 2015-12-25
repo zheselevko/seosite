@@ -2,4 +2,9 @@
 //=include lib/slick.min.js
 //=include materialize.js
 //=include carousel.js
+//=include jquery.bxslider.js
+//=include tabs.js
+//=include jquery.easing.1.3.js
+//=include jquery.hoverIntent.minified.js
+//=include jquery.naviDropDown.1.0.js
 //=include common.js
