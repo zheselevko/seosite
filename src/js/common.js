@@ -80,7 +80,22 @@ $('a.next').click(function () {
     var current = slider.getCurrentSlide();
     slider.goToNextSlide(current) + 1;
 });
-    
+   $('.diagrams').bxSlider({
+  mode: 'horizontal',
+  pagerCustom: '#bx-pager',
+  captions: false,
+  adaptiveHeight: true,
+  controls: false
+});
+var slider = $('.diagrams').bxSlider();
+$('a.prev').click(function () {
+    var current = slider.getCurrentSlide();
+    slider.goToPrevSlide(current) - 1;
+});
+$('a.next').click(function () {
+    var current = slider.getCurrentSlide();
+    slider.goToNextSlide(current) + 1;
+});   
    
 });
 
@@ -88,3 +103,65 @@ $(document).ready(function(){
   $("#prices").lightTabs();
 
   });
+$(function(){
+  var rightCta_selfOffset = $("#navigation_vert").offset().top - $('.header').height();
+  var rightCta_parent = $("#navigation_vert").parent().parent();
+  var rightCta_max = rightCta_parent.offset().top + rightCta_parent.height() - $('#navigation_vert').height();
+
+  $(window).scroll(function(){
+
+    
+    var set = $(document).scrollTop();
+    
+    
+    // console.log('selfOffset:'+rightCta_selfOffset);
+    // console.log('scrollTop:'+set);
+    // console.log('max:'+rightCta_max);
+    if (set > rightCta_max) {
+      // console.log('set>max: ' + set + '>'+rightCta_max);
+      set = rightCta_max;// - $("#right-form").height();
+    }
+    set -= rightCta_selfOffset - 10;
+    if (set<0) set=0;
+    set=set+"px";
+    // console.log('marginTop:'+set);
+    $("#navigation_vert").animate({marginTop:set}, {duration:1000,queue:false})
+  })
+});
+$(function(){
+  var rightCta_selfOffset = $("#request").offset().top - $('.header').height();
+  var rightCta_parent = $("#request").parent().parent();
+  var rightCta_max = rightCta_parent.offset().top + rightCta_parent.height() - $('#request').height();
+
+  $(window).scroll(function(){
+
+    
+    var set = $(document).scrollTop();
+    
+    
+    // console.log('selfOffset:'+rightCta_selfOffset);
+    // console.log('scrollTop:'+set);
+    // console.log('max:'+rightCta_max);
+    if (set > rightCta_max) {
+      // console.log('set>max: ' + set + '>'+rightCta_max);
+      set = rightCta_max;// - $("#right-form").height();
+    }
+    set -= rightCta_selfOffset - 10;
+    if (set<0) set=0;
+    set=set+"px";
+    // console.log('marginTop:'+set);
+    $("#request").animate({marginTop:set}, {duration:1000,queue:false})
+  })
+});
+$(document).ready(function(){
+  $('.companies').bxSlider({
+    slideWidth: 200,
+    minSlides: 3,
+    maxSlides: 3,
+    slideMargin: 10,
+    captions: false,
+    adaptiveHeight: true,
+    controls: true,
+    pager: false
+  });
+});

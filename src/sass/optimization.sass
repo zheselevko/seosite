@@ -1,0 +1,654 @@
+@import lib/mixins
+$font: Arial, Helvetica, sans-serif
+.optimization
+	.border
+		padding-bottom: 20px
+		border-bottom: 2px solid #edf0f4
+	.image
+		text-align: center
+		padding-bottom: 20px
+		border-bottom: 2px solid #edf0f4
+	.button
+		.icon-online
+			position: absolute
+			left: 20px
+			top: 50%
+			margin-top: -16px
+	b
+		color: #5d5c5c
+		font-size: 18px
+		font-weight: 400
+		font-family: $font
+	.steps
+		width: 100%
+		+box
+		+clr
+		border-bottom: 2px solid #edf0f4
+		.h3
+			margin-bottom: 10px
+		.steps__item
+			width: 100%
+			+box
+			+clr
+			margin-bottom: 10px
+			.name
+				padding-left: 30px
+				float: left
+				height: 60px
+				span
+					color: #5d5c5c
+					font-family: $font
+					font-size: 16px
+					font-weight: 600
+					
+			.icons
+				float: left
+				width: 70px
+				text-align: center
+			.info
+				float: left
+				width: 100%
+				+box
+				+clr
+				ul
+					padding: 0 0 0 35px
+					li
+						color: #5d5c5c
+						font-size: 15px
+						font-weight: 300
+						font-family: $font
+				.disc-style
+					padding-left: 55px
+.disc-style
+	padding-left: 45px
+	li
+		list-style-type: disc
+		color: #e6ac31
+		font-size: 15px
+		span
+			color: #5d5c5c
+			font-size: 15px
+			font-weight: 300
+			font-family: $font
+.resaults__list
+	width: 560px
+	margin: 0 auto
+	+box
+	+clr
+	.resaults__list_item
+		width: 100%
+		+box
+		+clr
+		border: 2px solid #edf0f4
+		border-radius: 10px
+		padding: 20px 35px 30px 35px
+		margin-bottom: 10px
+		.list__item_name
+			width: 100%
+			+box
+			+clr
+			margin-bottom: 10px
+			color: #1484c6
+			font-family: $font
+			padding-right: 20px
+			font-size: 15px
+			font-weight: 300
+			line-height: 24px
+			text-decoration: underline
+		.list__item_info
+			width: 100%
+			+box
+			+clr
+			.item__info_logo
+				width: 170px
+				text-align: center
+				height: 133px
+				img
+					background-size: contain
+					display: inline-block
+		.list__item_results
+			width: 100%
+			+box
+			+clr
+			.price
+				color: #e6ac31
+				font-family: $font
+				line-height: 1
+				font-size: 18px
+				font-weight: 700
+				span
+					display: block
+					color: #5d5c5c
+					font-family: $font
+					line-height: 1
+					margin-bottom: 10px
+					font-size: 15px
+					font-weight: 300
+					white-space: nowrap
+			.city
+				color: #5d5c5c
+				font-family: $font
+				font-size: 15px
+				font-weight: 400
+				position: relative
+				padding: 10px 0 0 35px
+				line-height: 1.8rem
+				.icon-compass
+					position: absolute
+					left: 0
+					top: 50%
+					margin-top: -8px
+.limitations
+	width: 100%
+	+box
+	+clr
+	li
+		position: relative
+		width: 100%
+		float: left
+		padding-left: 45px
+		margin-bottom: 20px
+		color: #5d5c5c
+		font-family: $font
+		font-size: 15px
+		font-weight: 400
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: 5px
+			width: 27px
+			height: 27px
+			background: url("../img/cross.png") 0 0 no-repeat
+.instruments
+	width: 100%
+	+box
+	+clr
+	li
+		position: relative
+		width: 100%
+		float: left
+		padding-left: 45px
+		margin-bottom: 20px
+		color: #5d5c5c
+		font-family: $font
+		font-size: 15px
+		font-weight: 400
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: 5px
+			width: 25px
+			height: 25px
+			background: url("../img/check.png") 0 0 no-repeat
+		span
+			display: block
+			color: #5d5c5c
+			font-family: $font
+			text-transform: uppercase
+			font-size: 15px
+			font-weight: 500
+			margin-bottom: 15px
+.coomercial
+	width: 100%
+	+box
+	+clr
+	padding: 55px 0 0 0
+	.item_coomercial
+		float: left
+		width: 100%
+		+box
+		+clr
+		margin-bottom: 20px
+		position: relative
+		[class^="icon-"]
+			position: absolute
+			left: 0
+			top: 0
+		.intro
+			padding-left: 130px
+			color: #5d5c5c
+			font-family: $font
+			font-size: 15px
+			font-weight: 300
+			.name
+				font-size: 16px
+				font-weight: 600
+				position: relative
+				padding-bottom: 10px
+				&:before
+					content: ''
+					position: absolute
+					left: 0
+					bottom: 0
+					width: 85px
+					height: 2px
+					background: #e6ac31
+			.disc-style
+				li
+					font-size: 15px
+					font-weight: 300
+					color: #5d5c5c
+					font-family: $font
+.complite
+	padding: 35px 0 0 0
+	.col
+		position: relative
+		.numb
+			position: absolute
+			left: 0
+			top: 0
+			width: 40px
+			color: #ebeced
+			font-family: $font
+			font-size: 20px
+			font-weight: 700
+		.info
+			padding-left: 40px
+			color: #5d5c5c
+			font-family: $font
+			font-weight: 300
+			font-size: 15px
+			.name
+				font-weight: 400
+.causes
+	width: 100%
+	+box
+	+clr
+	padding-top: 35px
+	.causes_item
+		float: left
+		width: 100%
+		+box
+		+clr
+		position: relative
+		margin-bottom: 20px
+		.info
+			padding-left: 85px
+			.name
+				color: #1484c6
+				font-size: 16px
+				font-weight: 400
+				text-transform: uppercase
+				font-family: $font
+				margin-bottom: 15px
+			.text
+				color: #5d5c5c
+				font-size: 15px
+				font-weight: 300
+				font-family: $font
+		[class^="icon-"]
+			position: absolute
+			left: 0
+			top: 0
+.price_shop
+	width: 100%
+	+box
+	+clr
+	padding: 35px 0 0 0
+	.price__item
+		float: left
+		width: 100%
+		position: relative
+		+box
+		+clr
+		margin-bottom: 10px
+		.numb
+			position: absolute
+			left: 0
+			top: 0
+			color: #ebeced
+			font-family: $font
+			font-size: 20px
+			font-weight: 700
+		.text
+			padding-left: 50px
+			color: #5d5c5c
+			font-family: $font
+			font-size: 15px
+			font-weight: 400
+			line-height: 2rem
+.box-diagrams
+	padding: 15px 0
+	width: 410px
+	margin: 0 auto
+	position: relative
+	ul
+		+box
+		+clr
+	.prev
+		top: 50%
+		left: -55px
+		margin-top: -13px
+		background: url("../img/prev_d.png") 0 0 no-repeat
+	.next
+		top: 50%
+		right: -55px
+		margin-top: -13px
+		+rotate(180)
+		background: url("../img/prev_d.png") 0 0 no-repeat
+.pad
+	padding: 20px 0 0 0
+.nobr
+	border: none !important
+.companies_slide
+	position: relative
+	+box
+	+clr
+	.bx-wrapper
+		margin: 0 auto
+		padding: 20px 0
+	.bx-prev
+		position: absolute
+		cursor: pointer
+		top: 50%
+		left: 0px
+		margin-top: -13px
+		width: 26px
+		height: 26px
+		text-indent: -9999px
+		background: url("../img/prev_d.png") 0 0 no-repeat
+	.bx-next
+		cursor: pointer
+		position: absolute
+		top: 50%
+		right: 0px
+		text-indent: -9999px
+		margin-top: -13px
+		width: 26px
+		height: 26px
+		+rotate(180)
+		background: url("../img/prev_d.png") 0 0 no-repeat
+.height
+	padding: 0 !important
+	.text
+		line-height: 1.5rem !important
+.bl
+	li
+		color: #5d5c5c
+		font-family: $font
+		font-size: 15px
+		font-weight: 300
+.scheme
+	.h3
+		margin-bottom: 35px
+	.l6
+		&:first-child
+			.box
+				border-top: 4px solid #1484c6
+				.numb
+					background: #1484c6
+				&:before
+					content: ''
+					position: absolute
+					top: 50%
+					width: 47px
+					height: 35px
+					right: -36px
+					z-index: 2
+					margin-top: -17px
+					background: url("../img/line_sc.png") 0 0 no-repeat
+	.box
+		width: 100%
+		+box
+		+clr
+		height: 244px
+		background-color: #ebeced
+		border-top: 4px solid #e6ac31
+		padding: 55px 20px 10px 30px
+		position: relative
+		.numb
+			width: 60px
+			height: 45px
+			background-color: #e6ac31
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -30px
+			text-align: center
+			color: white
+			font-family: $font
+			line-height: 3rem
+			font-size: 22px
+			font-weight: 700
+		p
+			color: #5d5c5c
+			font-family: $font
+			font-size: 15px
+			font-weight: 400
+.striped
+	border: 1px solid lightgray
+	td
+		color: #5d5c5c
+		font-family: $font
+		font-size: 15px
+		font-weight: 400
+		border-right: 1px solid lightgray
+.method
+	li
+		margin-bottom: 20px
+		font-size: 16px
+.content 
+	p
+		.yel
+			color: #e6ac31
+	.mb
+		margin-bottom: 25px
+.sentence
+	width: 100%
+	+box
+	padding: 15px 0 0 0
+	+clr
+	.sentence_item
+		float: left
+		width: 100%
+		+box
+		+clr
+		position: relative
+		margin-bottom: 20px
+		.info
+			padding-left: 75px
+			height: 50px
+			color: #5d5c5c
+			font-family: $font
+			font-size: 15px
+			font-weight: 300
+		[class^="icon-"]
+			position: absolute
+			top: 0
+			left: 0
+.examples
+	width: 100%
+	+box
+	+clr
+	padding: 20px 0 0 0
+	.image
+		border: none
+.lh
+	li
+		margin-bottom: 15px
+.level
+	width: 100%
+	+box
+	+clr
+	.level_info
+		font-family: $font
+		font-size: 18px
+		line-height: 1
+		padding: 0 45px 0 30px
+		p
+			margin: 10px 0 20px 0
+			color: #5d5c5c
+			font-weight: 400
+			font-size: 18px
+		.level_count
+			width: 100%
+			span
+				display: inline-block
+				padding-right: 25px
+				color: #5d5c5c
+				font-weight: 700
+				position: relative
+				&:first-child
+					color: #74b65f
+					&:before
+						content: '/'
+						position: absolute
+						right: 5px
+						top: 0
+						font-size: 18px
+						font-weight: 700
+						color: #5d5c5c
+	.text
+		height: 70px
+		color: #5d5c5c
+		font-family: $font
+		font-size: 15px
+		font-weight: 400
+.site-form
+	background-color: #ebeced
+	padding: 15px 15px
+	width: 100%
+	+box
+	+clr
+	.row 
+		.col.l5
+			width: 37.5%
+			input
+				background-color: white
+				border: 2px solid #ebeced
+				border-radius: 3px
+				padding: 0 10px
+				width: 267px
+			::-webkit-input-placeholder
+				color: #5d5c5c
+			::-moz-placeholder 
+				color: #5d5c5c       
+			:-moz-placeholder
+				color: #5d5c5c           
+			:-ms-input-placeholder
+				color: #5d5c5c 
+			input[type=text]:focus:not([readonly])
+				border: 2px solid #26a69a
+				box-shadow: none
+	.row
+		margin-bottom: 0
+		.col.l2
+			width: 25%
+			.btn
+				width: 178px
+				height: 44px
+				text-transform: initial
+				color: white
+				font-family: $font
+				font-size: 15px
+				font-weight: 400		
+.site
+	width: 100%
+	+box
+	+clr
+	padding: 10px 0
+	.intro
+		padding-left: 25px
+		.name
+			color: #1484c6
+			font-family: $font
+			font-size: 30px
+			font-weight: 700
+			line-height: 1
+			margin-bottom: 30px
+		.text
+			p
+				color: #5d5c5c
+				font-family: $font
+				font-size: 15px
+				font-weight: 400
+.express
+	height: 75px
+	border: 2px solid rgba(225,240,249, 0.9)
+	.h5
+		width: 100%
+		color: #1484c6
+		font-family: $font
+		font-size: 22px
+		font-weight: 700
+.table-results
+	tr
+		&:last-child
+			border-bottom: none
+	td
+		position: relative
+		width: 25%
+		color: #5d5c5c
+		font-family: $font
+		font-size: 15px
+		font-weight: 400
+		padding: 15px 10px
+		&:first-child
+			width: 50%
+		span
+			position: relative
+			padding-left: 30px
+			display: inline-block
+			margin-bottom: 10px
+			[class^="icon-"]
+				position: absolute
+				top: 50%
+				margin-top: -15px
+				left: 0
+		a
+			color: #5d5c5c
+			font-family: $font
+			font-size: 15px
+			font-weight: 400
+			text-decoration: underline
+		p
+			margin: 0 0 5px 0
+			span
+				padding: 0
+				color: #919191
+				font-size: 14px
+.bottom
+	padding: 20px 0
+	tr
+		border-bottom: 1px solid #d0d0d0 !important
+		border-top: 1px solid #d0d0d0
+.lnk
+	margin-bottom: 20px
+.done
+	width: 100%
+	+box
+	+clr
+.ansver
+	width: 100%
+	+box
+	+clr
+	background-color: rgba(116,182,95, 0.2)
+	padding: 35px 70px
+	input[type="text"]
+		background-color: white
+		border: 2px solid #ebeced
+		border-radius: 3px
+		padding: 0 10px
+		width: 304px
+		margin: 0
+	::-webkit-input-placeholder
+		color: #5d5c5c
+	::-moz-placeholder 
+		color: #5d5c5c       
+	:-moz-placeholder
+		color: #5d5c5c           
+	:-ms-input-placeholder
+		color: #5d5c5c 
+	input[type=text]:focus:not([readonly])
+		border: 2px solid #26a69a
+		box-shadow: none
+	.btn
+		width: 208px
+		height: 48px
+		text-transform: initial
+		color: white
+		font-family: $font
+		font-size: 15px
+		font-weight: 400	
