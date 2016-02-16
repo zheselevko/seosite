@@ -18249,3 +18249,20 @@ $(document).ready(function(){
     pager: false
   });
 });
+    function setEqualHeight(columns) {
+        var tallestcolumn = 0; columns.each( function() {
+            currentHeight = $(this).height();
+            if(currentHeight > tallestcolumn) {
+                tallestcolumn = currentHeight; } } );
+        columns.height(tallestcolumn); }
+    $(document).ready(function() { setEqualHeight($(".stage > div")); });
+    $(document).ready(function(){
+        $('.cont_result').bxSlider({
+            minSlides: 1,
+            maxSlides: 1,
+            captions: false,
+            adaptiveHeight: true,
+            controls: true,
+            pager: false
+        });
+    });
