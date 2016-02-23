@@ -4961,6 +4961,29 @@ blockquote .icon-superman { position: absolute; left: 0; top: 0; }
 .with-chevron li .valign-wrapper .blu:before { background-color: #69b4e0; }
 .with-chevron li .valign-wrapper .blu:after { background-color: #69b4e0; }
 .with-chevron li .valign-wrapper .text { padding-left: 15px; color: #5d5c5c; font-family: Arial, Helvetica, sans-serif; font-style: italic; font-size: 15px; }
+
+.catalog { margin-bottom: 40px; }
+.catalog .tab { border-bottom: 2px solid #1484c6; overflow: visible; }
+.catalog .tab:nth-child(2n) { border-bottom: 2px solid #e6ac31; }
+.catalog .tab a { color: #1484c6; font-family: Helvetica; font-size: 16px; font-weight: 400; text-decoration: underline; position: relative; overflow: inherit; overflow-y: hidden; text-transform: initial; }
+.catalog .tab a:hover { color: #29b6f6; text-decoration: none; }
+.catalog .tab .active { background-color: #e6ac31; color: #fff; overflow: inherit; text-decoration: none; }
+.catalog .tab .active:hover { color: #fff; text-decoration: none; }
+.catalog .tab .active:before { content: ""; position: absolute; bottom: -16px; width: 0; left: -20px; right: 0; height: 0; border-left: 172px solid transparent; border-right: 172px solid transparent; border-top: 16px solid #e6ac31; }
+.catalog .tab:nth-child(2n+1) .active { background-color: #1484c6; }
+.catalog .tab:nth-child(2n+1) .active:before { content: ""; position: absolute; bottom: -16px; width: 0; left: -20px; right: 0; height: 0; border-left: 172px solid transparent; border-right: 172px solid transparent; border-top: 16px solid #1484c6; }
+
+.sevices .service_item { position: relative; height: 365px; }
+.sevices .service_item .box { border: 2px solid #ebeced; padding: 30px 55px; -webkit-transition: 0.4s; transition: 0.4s; }
+.sevices .service_item .box a { color: #1484c6; font-size: 15px; text-decoration: underline; font-family: Arial, Helvetica, sans-serif; }
+.sevices .service_item .box a:hover { text-decoration: none; }
+.sevices .service_item .box .price { color: #5d5c5c; font-size: 18px; font-family: Arial, Helvetica, sans-serif; }
+.sevices .service_item .box .dop { display: none; }
+.sevices .service_item .active { background-color: #69b4e0; -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.21); box-shadow: 0 0 21px rgba(0, 0, 0, 0.21); z-index: 100; opacity: 1; position: relative; -webkit-transition: 0.4s; transition: 0.4s; border: 2px solid transparent; }
+.sevices .service_item .active a { color: #ffd989; font-size: 15px; font-weight: 400; text-decoration: underline; }
+.sevices .service_item .active p { color: #fff; }
+.sevices .service_item .active .price { color: #fff; }
+.sevices .service_item .active .dop { display: block; }
 @media only screen and (min-width: 601px) and (max-width: 992px){
  #toast-container{ min-width: 30%; left: 5%; right: 5%; bottom: 7%; }
  .toast{ float: left; } }

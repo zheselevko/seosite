@@ -18082,6 +18082,7 @@ THE SOFTWARE.
   };
 })(jQuery);
 
+//=modernizr.custom.34978.js
     $(document).ready(function(){
       $('.slider').slider({
       	'interval': 10000,
@@ -18184,6 +18185,36 @@ $('a.next').click(function () {
 });
 
 $(document).ready(function(){
+        
+        var $container  = $('.service_item'),
+          $articles = $container.children('.box'),
+          timeout;
+        
+        $articles.on( 'mouseenter', function( event ) {
+            
+          var $article  = $(this);
+          clearTimeout( timeout );
+          timeout = setTimeout( function() {
+            
+            if( $article.hasClass('active') ) return false;
+            
+            $articles.not( $article.removeClass('blur').addClass('active') )
+                 .removeClass('active')
+                 .addClass('blur');
+            
+          }, 85 );
+          
+        });
+        
+        $container.on( 'mouseleave', function( event ) {
+          
+          clearTimeout( timeout );
+          $articles.removeClass('active blur');
+          
+        });
+      
+      });
+$(document).ready(function(){
   $("#prices").lightTabs();
 
   });
@@ -18266,3 +18297,4 @@ $(document).ready(function(){
             pager: false
         });
     });
+
