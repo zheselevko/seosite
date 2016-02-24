@@ -108,13 +108,20 @@
 .sevices .service_item .box { border: 2px solid #ebeced; padding: 30px 55px; -webkit-transition: 0.4s; transition: 0.4s; }
 .sevices .service_item .box a { color: #1484c6; font-size: 15px; text-decoration: underline; font-family: Arial, Helvetica, sans-serif; }
 .sevices .service_item .box a:hover { text-decoration: none; }
+.sevices .service_item .box .image { width: 101px; margin: 0 auto; }
+.sevices .service_item .box .image span { display: table-cell; bottom: auto; vertical-align: middle; width: 101px; height: 101px; border: 6px solid #69b4e0; background-color: #1484c6; -webkit-border-radius: 50%; border-radius: 50%; position: relative; }
+.sevices .service_item .box .image span:before { content: ""; position: absolute; left: 50%; margin-left: -9px; bottom: -17px; width: 0; height: 0; border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 17px solid #69b4e0; }
+.sevices .service_item .box a.btn { color: white; font-family: Arial, Helvetica, sans-serif; text-transform: initial; text-decoration: none; font-size: 15px; font-weight: 400; }
 .sevices .service_item .box .price { color: #5d5c5c; font-size: 18px; font-family: Arial, Helvetica, sans-serif; }
-.sevices .service_item .box .dop { display: none; }
+.sevices .service_item .box .dop { display: none; padding: 10px 0; }
+.sevices .service_item .box .dop .more { padding: 10px 0 0 0; font-size: 15px; font-weight: 400; color: #fff; font-family: Arial, Helvetica, sans-serif; text-decoration: underline; display: inline-block; }
 .sevices .service_item .active { background-color: #69b4e0; -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.21); box-shadow: 0 0 21px rgba(0, 0, 0, 0.21); z-index: 100; opacity: 1; position: relative; -webkit-transition: 0.4s; transition: 0.4s; border: 2px solid transparent; }
 .sevices .service_item .active a { color: #ffd989; font-size: 15px; font-weight: 400; text-decoration: underline; }
 .sevices .service_item .active p { color: #fff; }
 .sevices .service_item .active .price { color: #fff; }
 .sevices .service_item .active .dop { display: block; }
+.sevices .service_item .active .image span { border: 6px solid #e6ac31; }
+.sevices .service_item .active .image span:before { content: ""; display: none; }
 
 
 
