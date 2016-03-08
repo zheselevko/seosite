@@ -4965,7 +4965,7 @@ blockquote .icon-superman { position: absolute; left: 0; top: 0; }
 .catalog { margin-bottom: 40px; }
 .catalog .tab { border-bottom: 2px solid #1484c6; overflow: visible; }
 .catalog .tab:nth-child(2n) { border-bottom: 2px solid #e6ac31; }
-.catalog .tab a { color: #1484c6; font-family: Helvetica; font-size: 16px; font-weight: 400; text-decoration: underline; position: relative; overflow: inherit; overflow-y: hidden; text-transform: initial; }
+.catalog .tab a { color: #1484c6; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 400; text-decoration: underline; position: relative; overflow: inherit; overflow-y: hidden; text-transform: initial; }
 .catalog .tab a:hover { color: #29b6f6; text-decoration: none; }
 .catalog .tab .active { background-color: #e6ac31; color: #fff; overflow: inherit; text-decoration: none; }
 .catalog .tab .active:hover { color: #fff; text-decoration: none; }
