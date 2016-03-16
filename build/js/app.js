@@ -18219,6 +18219,7 @@ $(document).ready(function(){
 
   });
 $(function(){
+	if ( $("#navigation_vert").length ) {
   var rightCta_selfOffset = $("#navigation_vert").offset().top - $('.header').height();
   var rightCta_parent = $("#navigation_vert").parent().parent();
   var rightCta_max = rightCta_parent.offset().top + rightCta_parent.height() - $('#navigation_vert').height();
@@ -18241,9 +18242,11 @@ $(function(){
     set=set+"px";
     // console.log('marginTop:'+set);
     $("#navigation_vert").animate({marginTop:set}, {duration:1000,queue:false})
-  })
+  });
+  }
 });
 $(function(){
+	if ( $("#request").length ){
   var rightCta_selfOffset = $("#request").offset().top - $('.header').height();
   var rightCta_parent = $("#request").parent().parent();
   var rightCta_max = rightCta_parent.offset().top + rightCta_parent.height() - $('#request').height();
@@ -18266,7 +18269,8 @@ $(function(){
     set=set+"px";
     // console.log('marginTop:'+set);
     $("#request").animate({marginTop:set}, {duration:1000,queue:false})
-  })
+  });
+  }
 });
 $(document).ready(function(){
   $('.companies').bxSlider({
@@ -18297,4 +18301,100 @@ $(document).ready(function(){
             pager: false
         });
     });
+	$(document).ready(function(){
+		$('body').on('click','.input-file .input-file-button',function(e){
+			$(this).parents('.input-file:eq(0)').find('input[type="file"]').trigger('click');
+			e.preventDefault();
+		});
+		
+		$('body').on('click','.input-file .input-field input',function(e){
+			$(this).parents('.input-file:eq(0)').find('input[type="file"]').trigger('click');
+			e.preventDefault();
+		});
+
+		$('body').on('change','.input-file input[type="file"]',function(){
+			var file = $(this).val();   
+			var reWin = /.*\\(.*)/;
+			var fileTitle = file.replace(reWin, "$1"); //выдираем название файла для windows
+			var reUnix = /.*\/(.*)/;
+			fileTitle = fileTitle.replace(reUnix, "$1"); //выдираем название файла для unix-систем   
+			$(this).parents('.input-file:eq(0)').find('input[type=text]').val(fileTitle); 
+		});
+		
+		/* tabs */
+		if ( $('.js-tabs-wrap').length ) {
+			$('.js-tab-controls-list a').on('click',function(e){
+				var cur = $(this);
+				var cur_li = cur.parents('li:eq(0)');
+				if ( !cur_li.hasClass('current') ){
+					cur_li.addClass('current').siblings().removeClass('current');
+					var cur_li_index = cur_li.index();
+					var parent = cur.parents('.js-tabs-wrap:eq(0)');
+					var content = parent.find('.js-tabs:eq(0)');
+					var cur_tab = content.children('.js-tab:eq('+cur_li_index+')');
+					cur_tab.fadeIn().siblings().fadeOut(0);
+					
+					// reload maps
+					if ( cur_tab.find('.yandex-map').length )
+						yandexMap.container.fitToViewport(true);
+					if ( cur_tab.find('#google-map').length ){
+						google.maps.event.trigger(googleMap,'resize');
+						googleMap.setCenter(googleMap_center);	
+					}
+				}
+				e.preventDefault();
+			});
+		}
+		/* tabs end */
+		
+		/* yandexMap */
+		if ( $('.yandex-map').length ) {
+			$('.yandex-map').each(function(index){
+				var obj = $(this);
+				var objIndex = index + 1;
+				var className = obj.attr('class');
+				obj.attr('id', 'map-'+objIndex);
+				var id = obj.attr('id');
+				var left = obj.data('left');
+				var right = obj.data('right');
+				var left_placemark = obj.data('placemark-left');
+				var right_placemark = obj.data('placemark-right');
+				var title_placemark = obj.data('title');
+				var zoom = obj.data('zoom');
+				ymaps.ready(function () {
+					// Create map
+					yandexMap = new ymaps.Map(id, {
+						center: [left, right],
+						zoom: zoom
+					});
+					myPlacemark = new ymaps.Placemark([left_placemark, right_placemark], {
+						hintContent: title_placemark,
+						help_hint: title_placemark,
+						balloonContent: '<div>'+title_placemark+'</div>'
+					});
+					// Add buttons and placemarks
+					yandexMap.controls.add('zoomControl', {top: '10px', left:'10px', height: '50px'});
+					yandexMap.geoObjects.add(myPlacemark);
+				});
+				
+			});
+		}
+		/* yandexMap end */
+		
+		var googleMap;
+		/* googleMap */
+		if ($('#google-map').length) {
+			function initialize() {
+				var mapOptions = {
+				  zoom: 16,
+				  center: new google.maps.LatLng(55.837560776866766, 37.44540149999996),
+				  mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			googleMap = new google.maps.Map(document.getElementById('google-map'),mapOptions);
+			googleMap_center = googleMap.getCenter();
+			}
+		google.maps.event.addDomListener(window, 'load', initialize);
+		}
+		/* googleMap end */
+	});
 

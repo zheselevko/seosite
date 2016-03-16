@@ -1,1 +1,1 @@
-{"version":3,"sources":["analitics.sass"],"names":[],"mappings":"AAGC,0BACC,oBAAmB,EAAA","file":"analitics.css","sourcesContent":["@import lib/mixins\r\n$font: Arial, Helvetica, sans-serif\r\n.analitics\r\n\t.breadcrumbs\r\n\t\tpadding: 0 0 25px 0"],"sourceRoot":"/source/"}
+{"version":3,"sources":["analitics.sass"],"names":[],"mappings":"AAGC,0BACC,oBAAmB,EAAA","file":"analitics.css","sourcesContent":["@import lib/mixins\n$font: Arial, Helvetica, sans-serif\n.analitics\n\t.breadcrumbs\n\t\tpadding: 0 0 25px 0"],"sourceRoot":"/source/"}
