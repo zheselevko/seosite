@@ -35,10 +35,30 @@
         <li><a href="mobile.html">Инсайды</a></li>
       </ul>
     <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="icon-n_faq"></i></a></li>
+        <li><a href="#popup-question" class="js-popup-link"><i class="icon-n_faq"></i></a></li>
         <li><a href="badges.html"><i class="icon-n_rss"></i></a></li>
-        <li><a href="collapsible.html"><i class="icon-n_mail"></i></a></li>
-        <li><a href="mobile.html"><i class="icon-n_search"></i></a></li>
+        <li>
+			<a href="#" class="js-header-blog-drop-link"><i class="icon-n_mail"></i></a>
+			<div class="blog-drop-subscribe js-header-blog-drop">
+				<div class="blog-drop-subscribe-title">Подпишитесь на<br> еженедельную рассылку Latio</div>
+				<p>Вы будете получать подборку полезных статей про интернет-маркетинг и продвижение бизнеса в интернете, а также новости и скидки на отраслевые мероприятия.</p>
+				<input type="text" name="blog_drop_subscribe_email" placeholder="E-mail адрес" />
+				<input type="text" name="blog_drop_subscribe_name" placeholder="Ваше имя" />
+				<div class="waves-effect yellow darken-5 btn">
+					<input class="" type="submit" value="Отправить заявку" />
+				</div>
+				<div class="blog-drop-subscribe-total">Уже подписались <strong>22211</strong> человек</div>
+			</div>
+		</li>
+        <li>
+			<a href="#" class="js-header-blog-drop-link"><i class="icon-n_search"></i></a>
+			<div class="blog-drop-search js-header-blog-drop">
+				<form action="#">
+					<input type="text" name="blog_drop_search" placeholder="Поиск по блогу" />
+					<input type="submit" class="icon-search" value="" />
+				</form>
+			</div>
+		</li>
       </ul>                                             
       </div>
       </div>
@@ -496,6 +516,65 @@
  </div>
  </div>
  </footer>
+ 
+ <div class="popup-container">
+ 	<!-- popup-callback -->
+ 	<div class="popup popup-callback" id="popup-callback">
+ 		<div class="popup-title">Закажите обратный звонок</div>
+ 		<form action="#">
+ 			<div class="popup-form-row">
+ 				<input type="text" class="phone-mask" name="popup_callback_phone" placeholder="+7(___)___-__-__">
+ 				<span class="icon-phone"></span>
+ 			</div>
+ 			<i class="waves-effect light-blue base btn waves-input-wrapper">
+ 				<input type="submit" value="Заказать звонок" class="waves-button-input">
+ 			</i>
+ 		</form>
+ 		<a href="#" class="popup-close js-popup-close"></a>
+ 	</div>
+ 	<!-- popup-callback end -->
+ 	
+ 	<!-- popup-question -->
+ 	<div class="popup popup-question" id="popup-question">
+ 		<div class="popup-title">У вас есть вопрос?<br>Задайте его нам!</div>
+ 		<form action="#">
+ 			<textarea name="popup_question_text" placeholder="Введите сюда ваш вопрос на тему продвижения бизнеса в интернете"></textarea>
+ 			<input type="text" name="popup_question_email" placeholder="E-mail адрес" />
+ 			<input type="text" name="popup_question_name" placeholder="Ваше имя" />
+ 			<i class="waves-effect light-blue base btn waves-input-wrapper">
+ 				<input type="submit" value="Отправить вопрос" class="waves-button-input">
+ 			</i>
+ 		</form>
+ 		<div class="popup-question-arrows">
+ 			<div class="popup-question-arrows-text1">Мы ответим на<br> вопрос письмом</div>
+ 			<div class="popup-question-arrows-text2">Или постом на<br> блоге</div>
+ 			<div class="popup-question-arrows-text3">а, может, даже снимем<br> видеоподкаст</div>
+ 		</div>
+ 		<div class="popup-question-faq">
+ 			<div class="popup-question-faq-title">faq</div>
+ 			<ul class="popup-question-faq-list">
+ 				<li><a href="#">1. К кому можно обратиться по поводу гостевых постов на Блоге ДLatio?</a></li>
+ 				<li><a href="#">2. Как мне заказать услуги в Latio?</a></li>
+ 				<li><a href="#">3. Где можно найти информацию о партнёрской программе Latio?</a></li>
+ 				<li><a href="#">4. Как мне связаться с маркетинг/PR отделом Latio?</a></li>
+ 				<li><a href="#">5. К кому можно обратиться по поводу программ Latio?</a></li>
+ 			</ul>
+ 		</div>
+ 		<a href="#" class="popup-close-black js-popup-close"></a>
+ 	</div>
+ 	<!-- popup-question end -->
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   <script src="js/app.js"></script>
 </body>
 </html>

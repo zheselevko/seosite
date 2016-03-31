@@ -39,8 +39,10 @@ nav {
 
 
   // Logo
-  .brand-logo {
+  .brand-logo { 
     position: absolute;
+	left: 0;
+	top: 4px; 
     color: $navbar-font-color;
     display: inline-block;
     font-size: $navbar-brand-font-size;

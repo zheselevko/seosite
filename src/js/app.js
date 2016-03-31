@@ -7,5 +7,7 @@
 //=include jquery.easing.1.3.js
 //=include jquery.hoverIntent.minified.js
 //=include jquery.naviDropDown.1.0.js
+//=include jquery.fancybox.pack.js
+//=include jquery.masked.input.js
 //=modernizr.custom.34978.js
 //=include common.js

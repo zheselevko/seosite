@@ -2,7 +2,7 @@
 .out .blog .header__nav .container .row .brand-logo { background: url("../img/blog_logo.png") 0 0 no-repeat; width: 63px; height: 50px; }
 .out .blog .header__nav .container .row ul.left { padding-left: 120px; }
 .out .blog .header__nav .container .row ul.left li a { font-size: 15px; padding: 0 11px; }
-.out .blog .header__nav .container .row ul.right { padding: 10px 0 0 0; }
+.out .blog .header__nav .container .row ul.right { padding: 10px 0 6px; position: relative; }
 .out .blog .header__nav .container .row ul.right li a { padding: 11px 11px; }
 .out .blog .header__nav .container .row ul.right li i { line-height: 26px; height: 26px; }
 
